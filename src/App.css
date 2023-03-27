@@ -1,6 +1,37 @@
 #root {
-  max-width: 100vw;
+  width: 100%;
   /*margin: 0 auto;*/
-  padding: 2rem;
+
   text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 0 16px;
+}
+
+.generator-password-box {
+  display: flex;
+  align-items: center;
+  padding: 17px 22px 15px 16px;
+  background: #24232c;
+}
+
+.rendered-password {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.rendered-password {
+  border: none;
+  background: none;
+  padding: 0;
 }
