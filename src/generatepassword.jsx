@@ -1,5 +1,5 @@
 import "./generatepassword.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function GeneratePassword() {
   const [text, setText] = useState("0");
@@ -41,6 +41,29 @@ function GeneratePassword() {
           value={text}
         />
       </div>
+
+      <ul
+        className="filters"
+        style={{
+          listStyle: "none",
+          display: "flex",
+          flexDirection: "column",
+          gap: "17px",
+        }}
+      >
+        <li className="filter">
+          <div className="check-box"></div> Include Uppercase Letters
+        </li>
+        <li className="filter">
+          <div className="check-box"></div>Include Lowercase Letters
+        </li>
+        <li className="filter">
+          <div className="check-box"></div>Include Numbers
+        </li>
+        <li className="filter">
+          <div className="check-box"></div>Include Symbols
+        </li>
+      </ul>
     </div>
   );
 }
@@ -58,5 +81,3 @@ const range = {
     margin: "13px 0 32px",
   },
 };
-
-const length = document.querySelector(".length");
