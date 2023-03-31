@@ -1,14 +1,11 @@
 import "./App.css";
-//import GeneratePassword from "./generatepassword";
-//import "./generatepassword.css";
 import { useState } from "react";
 import iconCheck from "./assets/images/icon-check.svg";
-//import generator from "generate-password";
+import generator from "generate-password";
 
 function App() {
   const [text, setText] = useState(0);
   const [password, setPassword] = useState("P4$5W0rD!");
-  //const [strength, setStrength] = useState("");
 
   const [uppercase, setUpperCase] = useState(false);
   const [lowercase, setLowerCase] = useState(false);
@@ -59,22 +56,17 @@ function App() {
     if (strengthCount !== 0) {
       const passwordCharacters = [];
       let newPassword = "";
-      //let strengthCount = 0;
 
       if (lowercase) {
-        //setStrengthCount(strengthCount++);
         passwordCharacters.push("abcdefghijklmnopqrstuvwxyz");
       }
       if (uppercase) {
-        //setStrengthCount(strengthCount++);
         passwordCharacters.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
       }
       if (numbers) {
-        //setStrengthCount(strengthCount++);
         passwordCharacters.push("0123456789");
       }
       if (symbols) {
-        //setStrengthCount(strengthCount++);
         passwordCharacters.push("!@#$%^&*_+;?,./-=");
       }
 
