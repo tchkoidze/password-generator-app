@@ -1,7 +1,5 @@
 #root {
   width: 100%;
-  /*margin: 0 auto;*/
-
   text-align: center;
 }
 
@@ -15,11 +13,29 @@
   padding: 0 16px;
 }
 
+h1 {
+  font-size: 16px;
+  line-height: 1.1;
+  color: #817d92;
+}
+
 .generator-password-box {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 17px 22px 15px 16px;
   background: #24232c;
+  margin: 16px 0;
+}
+
+.generator-password-box svg:hover,
+.generator-password-box svg:active {
+  cursor: pointer;
+}
+
+.generator-password-box svg:hover .copy,
+.generator-password-box svg:active .copy {
+  fill: #fff;
 }
 
 .rendered-password {
@@ -28,10 +44,225 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+  color: #e6e5ea;
+  height: 32px;
 }
 
 .rendered-password {
   border: none;
   background: none;
   padding: 0;
+}
+
+.rendered-password.default-password {
+  color: rgb(230, 229, 234, 0.5);
+}
+
+#lengthRange {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background-color: #18171f;
+  background-image: linear-gradient(#a4ffaf, #a4ffaf);
+  background-size: 50%, 50%;
+  background-repeat: no-repeat;
+}
+
+#lengthRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e6e5ea;
+}
+
+#lengthRange::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  background-color: #18171f;
+  border: 2px solid #a4ffaf;
+}
+
+.filters {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e6e5ea;
+}
+
+.check-box:hover {
+  cursor: pointer;
+  border: 2px solid #a4ffaf;
+}
+
+.strength-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #18171f;
+  padding: 14px 16px;
+  margin: 32px 0 16px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #817d92;
+}
+.slider-length {
+  display: flex;
+  width: 100%;
+  margin: 17px 0 42px;
+}
+
+.length {
+  font-size: 24px;
+  line-height: 32px;
+  color: #a4ffaf;
+}
+
+.showing-strength-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.generate-password {
+  padding: 16px;
+  background-color: #24232c;
+}
+
+.stength-boxes {
+  display: flex;
+  gap: 8px;
+}
+
+.stength-boxe {
+  width: 10px;
+  height: 28px;
+  border: 2px solid #e6e5ea;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 100%;
+  height: 46px;
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #24232c;
+  background-color: #a4ffaf;
+
+  border: none;
+  margin: 0 auto;
+}
+
+.generate-btn:hover {
+  cursor: pointer;
+  background-color: #24232c;
+  color: #a4ffaf;
+  border: 2px solid #a4ffaf;
+}
+
+.generate-btn:hover path {
+  fill: #a4ffaf;
+}
+
+@media (min-width: 768px) {
+  #root {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .App {
+    width: 540px;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .generator-password-box {
+    padding: 19px 28px;
+    margin: 31px 0 24px;
+  }
+
+  .rendered-password {
+    font-size: 32px;
+    line-height: 42px;
+    height: 42px;
+  }
+
+  .generator-password-box svg {
+    width: 21px;
+    height: 24px;
+  }
+
+  /*for filter password*/
+  .generate-password {
+    padding: 24px 32px 32px 32px;
+  }
+  h3,
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .rendered-password {
+    height: 42px;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .slider-length {
+    margin-top: 27px;
+  }
+
+  .length {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .filters {
+    gap: 19px;
+  }
+
+  .strength-container {
+    padding: 23px 31px 21px 32px;
+    margin: 31px 0 32px;
+  }
+  .generate-btn {
+    min-width: 476px;
+    height: 56px;
+    padding: 21px 176.89px 20px 177px;
+  }
 }
